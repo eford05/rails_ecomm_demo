@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Rails Ecomm Demo" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= yield :head %>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <%# Link Google Fonts %>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <%# linking Google Font Icons %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+    <main>
+      <nav class="side-nav">
+        <ul class="side-nav-links">
+          <li>
+            <span class="dash-logo unna-reg">logo</span>
+          </li>
+          <li>
+            <%= link_to admin_path, class: "side-nav-li" do %>
+              <span class="material-symbols-outlined">
+                dashboard
+              </span>
+              <span>Dashboard</span>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to admin_path, class: "side-nav-li" do %>
+              <span class="material-symbols-outlined">
+                inventory_2
+              </span>
+              <span>Products</span>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to admin_path, class: "side-nav-li" do %>
+              <span class="material-symbols-outlined">
+                category
+              </span>
+              <span>Categories</span>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to admin_path, class: "side-nav-li" do %>
+              <span class="material-symbols-outlined">
+                inventory
+              </span>
+              <span>Orders</span>
+            <% end %>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-container">
+        <%= yield %>
+      </div>
+    </main>
+  </body>
+</html>

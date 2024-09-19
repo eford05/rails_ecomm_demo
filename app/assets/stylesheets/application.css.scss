@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "font-awesome";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-white: #fff7f7;
+  --secondary-white: #f8ede3;
+  --light-grey: #d8d9da;
+  --medium-grey: #61677a;
+  --beige: #d0b8a8;
+  --font-color: #272829;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--font-color);
+  font-family: "Lato", system-ui;
+  font-weight: 300;
+}
+
+main {
+  display: flex;
+}
+
+.unna-reg {
+  font-family: "Unna", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.side-nav {
+  width: 16rem;
+  min-height: 100vh;
+  padding: 3rem 1.2rem;
+  background-color: var(--primary-white);
+}
+
+.side-nav-links {
+  height: 70%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-nav-li {
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.side-nav-li:hover {
+  background-color: #ffffffe0;
+  border-radius: 4px;
+}
+
+.dash-logo {
+  font-size: 2rem;
+}
+
+.main-container {
+  padding: 2rem;
+}
