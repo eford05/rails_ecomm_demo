@@ -41,7 +41,13 @@ main {
   display: flex;
 }
 
-.unna-reg {
+// All heading styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Unna", system-ui;
   font-weight: 400;
   font-style: normal;
