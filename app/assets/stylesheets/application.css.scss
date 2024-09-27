@@ -49,7 +49,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.dash-logo {
   font-family: "Unna", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -62,6 +63,10 @@ h6 {
   background-color: var(--primary-white);
 }
 
+.dash-logo {
+  font-size: 2rem;
+}
+
 .side-nav-links {
   height: 70%;
   list-style-type: none;
@@ -72,8 +77,9 @@ h6 {
 
 .side-nav-li {
   text-decoration: none;
-  color: var(--font-color);
+  color: var(--actions);
   font-size: 1.5rem;
+  font-weight: 400;
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -84,10 +90,6 @@ h6 {
 .side-nav-li:hover {
   background-color: #ffffffe0;
   border-radius: 4px;
-}
-
-.dash-logo {
-  font-size: 2rem;
 }
 
 .main-container {
