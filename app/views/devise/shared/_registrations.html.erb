@@ -1,6 +1,6 @@
 <div class="container <%- if controller_name != 'sessions' %>
   right-panel-active
-<% end %>" id="container">
+<% end %>" id="container" data-controller="reg-actions" data-reg-actions-target="container">
   <div class="form-container sign-up-container">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <h1 class="reg-title">Create Account</h1>
@@ -59,6 +59,6 @@
         <button>Sign Up</button>
       </div>
     </div>
-    <button id="overlay-btn"></button>
+    <button id="overlay-btn" data-reg-actions-target="btn" data-action="click->reg-actions#toggleFormActions"></button>
   </div>
 </div>
