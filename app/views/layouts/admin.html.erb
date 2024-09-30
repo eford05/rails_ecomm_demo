@@ -22,53 +22,9 @@
   </head>
   <body>
     <main>
-      <nav class="side-nav">
-        <ul class="side-nav-links">
-          <li>
-            <span class="dash-logo">logo</span>
-          </li>
-          <li>
-            <%= link_to admin_path, class: "side-nav-li" do %>
-              <span class="material-symbols-outlined">
-                dashboard
-              </span>
-              <span>Dashboard</span>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to admin_path, class: "side-nav-li" do %>
-              <span class="material-symbols-outlined">
-                inventory_2
-              </span>
-              <span>Products</span>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to admin_path, class: "side-nav-li" do %>
-              <span class="material-symbols-outlined">
-                category
-              </span>
-              <span>Categories</span>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to admin_path, class: "side-nav-li" do %>
-              <span class="material-symbols-outlined">
-                inventory
-              </span>
-              <span>Orders</span>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to destroy_admin_session_path, method: :delete, data: { turbo_method: :delete }, class: "side-nav-li" do %>
-              <span class="material-symbols-outlined">
-                logout
-              </span>
-              <span>Sign Out</span>
-            <% end %>
-          </li>
-        </ul>
-      </nav>
+      <%- if controller_name != 'home' %>
+        <%= render "admin/shared/admin_dashboard" %>
+      <%end%>
       <div class="main-container">
         <%= yield %>
       </div>
