@@ -1,0 +1,20 @@
+<div class="container <%- if controller_name != 'sessions' %>
+  right-panel-active
+<% end %>" id="container" data-controller="reg-actions" data-reg-actions-target="container">
+  <div class="form-container sign-up-container"></div>
+  <div class="form-container sign-in-container"></div>
+  <div class="overlay-container" id="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <button>Sign In</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Hello, Friend!</h1>
+        <p>Enter your personal details and start your journey with us</p>
+        <button>Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -99,7 +99,7 @@ h6,
   // padding: 2rem;
 }
 
-/* Registration Styles: Login/SignUp */
+/* Authentication Styles */
 .registration-container {
   width: 100vw;
   height: 100vh;
@@ -111,185 +111,42 @@ h6,
 }
 
 .container {
+  color: var(--actions);
   position: relative;
   width: 53rem;
   height: 32rem;
   background-color: #fff;
   border-radius: 13px;
   box-shadow: 15px 20px 30px #5557;
-  overflow: hidden;
-}
-
-.form-container {
-  position: absolute;
-  width: 60%;
-  height: 100%;
-  padding: 0px 40px;
-  transition: all 0.6s ease-in-out;
-}
-
-.sign-up-container {
-  opacity: 0;
-  z-index: -1;
-}
-
-.sign-in-container {
-  z-index: 2;
-}
-
-form {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0px 50px;
-}
-
-.field {
-  position: relative;
-  margin: 8px 0px;
-  width: 100%;
-}
-
-input {
-  width: 100%;
-  padding: 12px 15px;
-  background-color: #f3f3f3;
-  border: none;
-  outline: none;
-}
-
-.forgot {
-  font-size: 14px;
-  text-decoration: none;
-  margin: 15px 0px;
-  color: var(--font-color);
-}
-
-.actions,
-.overlay button {
-  width: fit-content;
-  border-radius: 20px;
-  border: 1px solid var(--actions);
-  background: var(--actions);
-  font-size: 12px;
-  font-weight: bold;
-  padding: 12px 45px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.actions {
-  color: #fff;
-  cursor: pointer;
-}
-
-.overlay button {
-  color: var(--actions);
+  // overflow: hidden;
 }
 
 .overlay-container {
   position: absolute;
-  top: 0;
-  left: 60%;
+  right: 0;
   width: 40%;
   height: 100%;
-  overflow: hidden;
-  transition: transform 0.6s ease-in-out;
   z-index: 9;
-}
-
-#overlay-btn {
-  cursor: pointer;
-  position: absolute;
-  left: 50%;
-  top: 304px;
-  transform: translateX(-50%);
-  width: 143.67px;
-  height: 40px;
-  border: 1px solid var(--actions);
-  background: transparent;
-  border-radius: 20px;
-  z-index: 10;
+  background: var(--primary-white);
+  transition: transform 0.6s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .overlay {
-  position: relative;
-  background: var(--primary-white);
-  left: -150%;
-  height: 100%;
+  position: absolute;
+  right: 0;
   width: 250%;
-  transition: transform 0.6s ease-in-out;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
 }
 
 .overlay-panel {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0px 40px;
-  text-align: center;
-  height: 100%;
-  width: 340px;
-  transition: 0.6s ease-in-out;
-}
-
-.overlay-left {
-  right: 60%;
-  transform: translateX(-12%);
-}
-
-.overlay-right {
-  right: 0;
-  transform: translateX(0%);
-}
-
-.overlay-panel h1,
-.reg-title {
-  color: var(--actions);
-  font-weight: bold;
-}
-
-.overlay-panel p {
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.5px;
-  margin: 25px 0px 35px;
-}
-
-.overlay-panel button {
-  border: none;
-  background: transparent;
-}
-
-.right-panel-active .overlay-container {
-  transform: translateX(-150%);
-}
-
-.right-panel-active .overlay {
-  transform: translateX(50%);
-}
-
-.right-panel-active .overlay-left {
-  transform: translateX(25%);
-}
-
-.right-panel-active .overlay-right {
-  transform: translateX(35%);
-}
-
-.right-panel-active .sign-in-container {
-  transform: translateX(20%);
-  opacity: 0;
-}
-
-.right-panel-active .sign-up-container {
-  transform: translateX(66.7%);
-  opacity: 1;
-  z-index: 5;
-  animation: show-sign-up 0.6s;
+  width: 40%;
+  border: 1px solid blue;
 }
 
 @keyframes show-sign-up {
