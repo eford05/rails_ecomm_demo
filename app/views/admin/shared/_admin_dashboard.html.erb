@@ -4,7 +4,7 @@
     <h1 class="logo-dash">logo</h1>
     <ul class="side-nav-list">
       <li>
-        <%= link_to root_path do %>
+        <%= link_to root_path, class: "side-nav-link" do %>
           <span class="dash-icon material-symbols-outlined">
             home
           </span>
@@ -12,32 +12,32 @@
         <% end %>
       </li>
       <li>
-        <%= link_to admin_path do %>
-          <span class="material-symbols-outlined">
+        <%= link_to admin_path, class: "side-nav-link" do %>
+          <span class="dash-icon material-symbols-outlined">
             dashboard
           </span>
           <span class="dash-link">Dashboard</span>
         <% end %>
       </li>
       <li>
-        <%= link_to admin_path do %>
-          <span class="material-symbols-outlined">
+        <%= link_to admin_path, class: "side-nav-link" do %>
+          <span class="dash-icon material-symbols-outlined">
             inventory_2
           </span>
           <span class="dash-link">Products</span>
         <% end %>
       </li>
       <li>
-        <%= link_to admin_path do %>
-          <span class="material-symbols-outlined">
+        <%= link_to admin_path, class: "side-nav-link" do %>
+          <span class="dash-icon material-symbols-outlined">
             category
           </span>
           <span class="dash-link">Categories</span>
         <% end %>
       </li>
       <li>
-        <%= link_to admin_path do %>
-          <span class="material-symbols-outlined">
+        <%= link_to admin_path, class: "side-nav-link" do %>
+          <span class="dash-icon material-symbols-outlined">
             inventory
           </span>
           <span class="dash-link">Orders</span>
@@ -46,12 +46,14 @@
     </ul>
     <div class="dash-profile-container">
       <%# Inside this area I would like to have the admin's username and profile picture %>
-      <%= link_to destroy_admin_session_path, method: :delete, data: { turbo_method: :delete } do %>
-        <span class="material-symbols-outlined">
-          logout
-        </span>
-        <span class="dash-link">Logout</span>
-      <% end %>
+      <div>
+        <%= link_to destroy_admin_session_path, method: :delete, data: { turbo_method: :delete }, class: "side-nav-link" do %>
+          <span class="dash-icon material-symbols-outlined">
+            logout
+          </span>
+          <span class="dash-link">Logout</span>
+        <% end %>
+      </div>
     </div>
   </nav>
 </section>
