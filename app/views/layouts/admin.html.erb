@@ -21,14 +21,15 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-  <body>
-    <main>
-      <%- if controller_name != 'home'%>
-        <%= render "admin/shared/admin_dashboard" %>
-      <%end%>
-      <div class="main-container">
-        <%= yield %>
-      </div>
+  <body class="<%- if controller_name != 'home'%>
+  admin-body
+  <%end%>">
+    <header class="header"></header>
+    <%- if controller_name != 'home'%>
+      <%= render "admin/shared/admin_dashboard" %>
+    <%end%>
+    <main class="main">
+      <%= yield %>
     </main>
     <script type="module">
       import "application"
