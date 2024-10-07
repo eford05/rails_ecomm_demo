@@ -29,14 +29,14 @@
 }
 
 /* Authentication: Form Styles */
-.form-container {
+.auth-form-container {
   position: absolute;
   width: 60%;
   height: 100%;
   transition: all 0.8s ease-in-out;
 }
 
-form {
+.auth-form {
   height: 100%;
   display: flex;
   flex-direction: column;

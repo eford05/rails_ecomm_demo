@@ -22,13 +22,9 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-  <body class="<%- if controller_name != 'home'%>
-  admin-body
-  <%end%>">
+  <body class="admin-body">
     <header class="header"></header>
-    <%- if controller_name != 'home'%>
-      <%= render "admin/shared/admin_dashboard" %>
-    <%end%>
+    <%= render "admin/shared/admin_dashboard" %>
     <main class="main">
       <%= yield %>
     </main>

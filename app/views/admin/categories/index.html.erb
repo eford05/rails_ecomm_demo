@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+<% content_for :title, "Categories" %>
+<h1>Categories</h1>
+<div id="admin_categories">
+  <% @admin_categories.each do |category| %>
+    <%= render category %>
+    <p>
+      <%= link_to "Show this category", [:admin, category] %>
+    </p>
+    <p>
+      <%= link_to "Edit this category", edit_admin_category_path(category) %>
+    </p>
+  <% end %>
+</div>
+<%= link_to "New category", new_admin_category_path %>
