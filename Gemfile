@@ -21,7 +21,7 @@ gem "jbuilder"
 
 gem "htmlbeautifier"
 
-gem "font-awesome-sass", "~> 6.5.1"
+gem "font-awesome-sass", "~> 6.7.2"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
